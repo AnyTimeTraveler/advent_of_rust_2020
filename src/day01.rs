@@ -1,8 +1,5 @@
-pub(crate) fn first(input: String) -> u64 {
-    let numbers: Vec<u64> = input.split('\n')
-        .filter(|line| !line.trim().is_empty())
-        .map(|val| val.parse().unwrap())
-        .collect();
+pub(crate) fn first(input: &str) -> i64 {
+    let numbers = parse_data(input);
 
     for a in &numbers {
         for b in &numbers {
@@ -14,11 +11,8 @@ pub(crate) fn first(input: String) -> u64 {
     unreachable!();
 }
 
-pub(crate) fn second(input: String) -> u64 {
-    let numbers: Vec<u64> = input.split('\n')
-        .filter(|line| !line.trim().is_empty())
-        .map(|val| val.parse().unwrap())
-        .collect();
+pub(crate) fn second(input: &str) -> i64 {
+    let numbers = parse_data(input);
 
     for a in &numbers {
         for b in &numbers {
@@ -30,4 +24,12 @@ pub(crate) fn second(input: String) -> u64 {
         }
     }
     unreachable!();
+}
+
+fn parse_data(input: &str) -> Vec<i64> {
+    let numbers: Vec<i64> = input.split('\n')
+        .filter(|line| !line.trim().is_empty())
+        .map(|val| val.parse().unwrap())
+        .collect();
+    numbers
 }
