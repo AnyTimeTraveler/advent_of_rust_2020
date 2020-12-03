@@ -1,0 +1,12 @@
+root = true
+
+[src/*.rs]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = off
+
+ij_rust_keep_indents_on_empty_lines = false

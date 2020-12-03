@@ -3,6 +3,7 @@ use std::io::Read;
 
 mod day01;
 mod day02;
+mod day03;
 
 fn main() {
     let mut runs = [
@@ -10,6 +11,8 @@ fn main() {
         day01::second,
         day02::first,
         day02::second,
+        day03::first,
+        day03::second,
     ].iter().enumerate();
 
     while let Some((i, day)) = runs.next() {
