@@ -50,7 +50,7 @@ fn get_trees_for_slope(direction: (i64, i64), trees: &HashSet<(i64, i64)>, max_x
     trees_encountered
 }
 
-
+#[cfg(test)]
 mod test {
     use super::{first, parse_tree_locations, get_trees_for_slope};
 

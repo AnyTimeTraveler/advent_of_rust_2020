@@ -1,9 +1,12 @@
+#![feature(str_split_once)]
+
 use std::fs::File;
 use std::io::Read;
 
 mod day01;
 mod day02;
 mod day03;
+mod day04;
 
 fn main() {
     let mut runs = [
@@ -13,6 +16,8 @@ fn main() {
         day02::second,
         day03::first,
         day03::second,
+        day04::first,
+        day04::second,
     ].iter().enumerate();
 
     while let Some((i, day)) = runs.next() {

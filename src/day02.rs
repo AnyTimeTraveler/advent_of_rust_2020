@@ -47,7 +47,7 @@ fn parse_data(input: &str) -> Vec<Data> {
         .collect()
 }
 
-
+#[cfg(test)]
 mod test {
     use super::second;
 
