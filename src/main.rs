@@ -7,6 +7,7 @@ mod day01;
 mod day02;
 mod day03;
 mod day04;
+mod day05;
 
 fn main() {
     let mut runs = [
@@ -18,6 +19,8 @@ fn main() {
         day03::second,
         day04::first,
         day04::second,
+        day05::first,
+        day05::second,
     ].iter().enumerate();
 
     while let Some((i, day)) = runs.next() {
