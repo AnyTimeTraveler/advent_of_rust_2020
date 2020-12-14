@@ -43,7 +43,8 @@ fn is_valid(passport: &str) -> bool {
         .collect();
     ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
         .iter()
-        .all(|key| keys.contains(key))
+        .all(|key| keys.contains(key))&&
+        keys.len() == 7 || keys.len() == 8
 }
 
 #[cfg(test)]
