@@ -16,15 +16,14 @@ pub(crate) fn second(input: &str) -> i64 {
     let mut iter = seats.iter();
 
     let mut last_id = *iter.next().unwrap();
-    loop {
-        if let Some(id) = iter.next() {
-            if *id == last_id + 2 {
-                return id + 1;
-            } else {
-                last_id = *id;
-            }
+    while let Some(id) = iter.next() {
+        if *id == last_id + 2 {
+            return last_id + 1;
+        } else {
+            last_id = *id;
         }
     }
+    unreachable!()
 }
 
 fn get_seat_id(line: &str) -> i64 {
